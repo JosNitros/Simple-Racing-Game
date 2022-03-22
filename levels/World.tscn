@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://levels/Player/Playa.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/common assets/Road_Tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/raw assets/test arrow/arrow.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Arrow.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5505, 16.7619 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="World" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, -1 )
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 0, 16, 0, 1, 1610612752, 0, 2, 1610612752, 0, 3, 1610612752, 0, 4, 1610612752, 0, 5, 1, 0, 6, 2, 0, 7, 4, 0, 8, 6, 0, 9, 8, 0, 10, 1610612752, 0, 65536, 16, 0, 65537, 1610612752, 0, 65538, 1610612752, 0, 65539, 1610612752, 0, 65540, 1610612752, 0, 65541, 0, 0, 65542, 3, 0, 65543, 5, 0, 65544, 7, 0, 65545, 9, 0, 65546, 10, 0, 131072, 16, 0, 131073, 1610612752, 0, 131074, 1610612752, 0, 131075, 1610612752, 0, 131076, 1610612752, 0, 131077, 18, 0, 131078, 1610612752, 0, 131079, 1610612752, 0, 131080, 1610612752, 0, 131081, 11, 0, 131082, 12, 0, 196608, 16, 0, 196609, 1610612752, 0, 196610, 1610612752, 0, 196611, 1610612752, 0, 196612, 1610612752, 0, 196613, 18, 0, 196614, 1610612752, 0, 196615, 1610612752, 0, 196616, 1610612752, 0, 196617, 13, 0, 196618, 12, 0, 262144, 1610612750, 0, 262145, 1610612751, 0, 262146, -536870894, 0, 262147, -536870894, 0, 262148, -536870894, 0, 262149, 17, 0, 262150, -536870894, 0, 262151, -536870894, 0, 262152, -536870894, 0, 262153, 15, 0, 262154, 14, 0, 327680, 1610612748, 0, 327681, 1610612749, 0, 327682, 1610612752, 0, 327683, 1610612752, 0, 327684, 1610612752, 0, 327685, 18, 0, 327686, 1610612752, 0, 327687, 1610612752, 0, 327688, 1610612752, 0, 327689, 1610612752, 0, 327690, 1610612752, 0, 393216, 1610612748, 0, 393217, 1610612747, 0, 393218, 1610612752, 0, 393219, 1610612752, 0, 393220, 1610612752, 0, 393221, 18, 0, 393222, 1610612752, 0, 393223, 1610612752, 0, 393224, 1610612752, 0, 393225, 1610612752, 0, 393226, 1610612752, 0, 458752, 1610612746, 0, 458753, 1610612745, 0, 458754, 1610612743, 0, 458755, 1610612741, 0, 458756, 1610612739, 0, 458757, 1610612736, 0, 458758, 1610612752, 0, 458759, 1610612752, 0, 458760, 1610612752, 0, 458761, 1610612752, 0, 458762, 1610612752, 0, 524288, 16, 0, 524289, 1610612744, 0, 524290, 1610612742, 0, 524291, 1610612740, 0, 524292, 1610612738, 0, 524293, 1610612737, 0, 524294, 1610612752, 0, 524295, 1610612752, 0, 524296, 1610612752, 0, 524297, 1610612752, 0, 524298, 1610612752, 0 )
+
+[node name="Playa" parent="." instance=ExtResource( 1 )]
+position = Vector2( 351, 289 )
+
+[node name="1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1"]
+position = Vector2( 350.551, 185.2 )
+shape = SubResource( 1 )
+
+[node name="2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2"]
+position = Vector2( 475.082, 58.6885 )
+shape = SubResource( 1 )
+
+[node name="3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3"]
+position = Vector2( 623.282, 180.289 )
+shape = SubResource( 1 )
+
+[node name="4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4"]
+position = Vector2( 476.032, 287.64 )
+shape = SubResource( 1 )
+
+[node name="5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5"]
+position = Vector2( 222.38, 287.64 )
+shape = SubResource( 1 )
+
+[node name="6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6"]
+position = Vector2( 79.8791, 398.791 )
+shape = SubResource( 1 )
+
+[node name="7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="7"]
+position = Vector2( 210.98, 515.641 )
+shape = SubResource( 1 )
+
+[node name="8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="8"]
+position = Vector2( 350.816, 383.683 )
+shape = SubResource( 1 )
+
+[node name="Arrow" type="StaticBody2D" parent="."]
+position = Vector2( 286.535, 203.53 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Arrow"]
+scale = Vector2( 0.281205, 0.267942 )
+texture = ExtResource( 5 )
+[connection signal="body_exited" from="1" to="Arrow" method="_on_1_body_exited"]
+[connection signal="body_exited" from="2" to="Arrow" method="_on_2_body_exited"]
+[connection signal="body_exited" from="3" to="Arrow" method="_on_3_body_exited"]
+[connection signal="body_exited" from="4" to="Arrow" method="_on_4_body_exited"]
+[connection signal="body_exited" from="5" to="Arrow" method="_on_5_body_exited"]
+[connection signal="body_exited" from="6" to="Arrow" method="_on_6_body_exited"]
+[connection signal="body_exited" from="7" to="Arrow" method="_on_7_body_exited"]
+[connection signal="body_exited" from="8" to="Arrow" method="_on_8_body_exited"]
